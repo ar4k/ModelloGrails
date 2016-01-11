@@ -66,4 +66,7 @@ Per creare un war installabile su Tomcat >= 7
 
 ### Note per gli sviluppatori
 
+La documentazione delle classi Groovy è disponibile a questo indirizzo: [http://ar4k.github.io/ModelloGrails/web-app/docs/gapi/index.html](http://ar4k.github.io/ModelloGrails/web-app/docs/gapi/index.html);
+La documentazione delle classi Java è raggiungibile in questo: [http://ar4k.github.io/ModelloGrails/web-app/docs/api/index.html](http://ar4k.github.io/ModelloGrails/web-app/docs/api/index.html) 
+
 L'ambiente è testato per l'esecuzione con la JVM Oracle in versione 1.7.x. 
