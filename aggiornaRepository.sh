@@ -11,7 +11,7 @@ echo "git commit -a -m \"$1\""
 git commit -a -m "$1"
 echo "git push"
 git push
-#echo "aggiorna documentazione web su GitHub"
-#git push -f origin master:gh-pages
+echo "aggiorna documentazione web su GitHub"
+git push -f origin master:gh-pages
 
 exit 0
