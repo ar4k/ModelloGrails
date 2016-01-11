@@ -1,0 +1,106 @@
+/*
+Template configurazione applicativo Agente Ar4k
+by Ambrosini Rossonet s.c.a r.l.
+
+Queste le configurazioni minime, tutte le configurazioni in questo file sovrascrivono le predefinite.
+Il file va sistemato in ~/.rossonet/AgenteAr4k-config.groovy o <home utente>\.rossonet\AgenteAr4k-config.groovy 
+
+Se le configurazioni per connettersi non sono presenti, l'applicativo presenta un'interfaccia di boot guidato.
+*/
+
+olark.key='1445-771-10-6904' //Per assistenza remota
+
+master.host = '127.0.0.1'
+master.port = 22
+master.user = 'ar4k'
+// Iniziare la stringa chiave con """ e concludere con uguale combinazione
+master.key = """
+-----BEGIN RSA PRIVATE KEY-----
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-----END RSA PRIVATE KEY-----
+"""
+
+// Contesto
+contesto = 'Bootstrap-Ar4k'
+
+// Interfaccia
+interfaccia = 'Bootstrap-Ar4k'
+
+// Codice attivazione Ar4K (Attivazioni commerciali)
+//codiceAttivazione = ''
+
+// Configurazione proxy tra la JVM e il vaso master
+//proxyVersoMaster = ''
+
+// Configurazione proxy tra il vaso master e Internet
+//proxyMasterInternet = ''
+
+// Utenza da aggiungere
+//utente='rossonet'
+//password='password'
+
+// configurazioni activiti
+activiti {
+	  jobExecutorActivate = false
+	  mailServerHost = "smtp.yourserver.com"
+	  mailServerPort = "25"
+	  mailServerUsername = ""
+	  mailServerPassword = ""
+	  mailServerDefaultFrom = "username@yourserver.com"
+	  history = "audit" // "none", "activity", "audit" or "full"
+}
+
+grails.plugin.facebooksdk.app.id = 000000000
+grails.plugin.facebooksdk.app.secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+oauth {
+        providers {
+                twitter {
+                        key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+                        secret = 'xxxxxxxxxxxxxxxxxxxxxxxx'
+			callback = "http://localhost:8080/oauth/twitter/callback"
+			//callback = "http://localhost:8080/AgenteAr4k/oauth/twitter/callback"
+                }
+                linkedin {
+                        key = 'xxxxxxxxxxxxxxxxxxxx'
+                        secret = 'xxxxxxxxxxxxxxxxxxxxxx'
+			callback = "http://localhost:8080/oauth/linkedin/callback"
+			//callback = "http://localhost:8080/AgenteAr4k/oauth/linkedin/callback"
+                }
+                google {
+                        key = '534535353ccew2r2r23r.apps.googleusercontent.com'
+                        secret = 'xxxxxxxxxxxxxxxxxxxxxxxxx'
+			callback = "http://localhost:8080/oauth/google/callback"
+			//callback = "http://localhost:8080/AgenteAr4k/oauth/google/callback"
+                }
+                facebook {
+                        key = 'xxxxxxxxxxxxxxxxxx'
+                        secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+			callback = "http://localhost:6630/oauth/facebook/callback"
+			//callback = "http://localhost:8080/AgenteAr4k/oauth/facebook/callback"
+                }
+        }
+}
+
+
+// Configurazione invio mail
+grails {
+        mail {
+//        host = "smtp.gmail.com"
+//        port = 465
+          username = "xxxxxxxx@gmail.com"
+          password = "xxxxxx"
+//        props = ["mail.smtp.auth":"true",
+//                         "mail.smtp.socketFactory.port":"465",
+//                         "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+//                         "mail.smtp.socketFactory.fallback":"false"]
+        }
+}
+
+// Configurazione ActiveMQ
+
+grails.plugin.routing.jms.brokerURL = 'tcp://localhost:61616' 
+grails.plugin.routing.jms.userName = 'admin'
+grails.plugin.routing.jms.password =  'xxxx'

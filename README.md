@@ -1,5 +1,5 @@
 #JavaAr4k
-Progetto bootstrap applicativi Grails
+Progetto bootstrap applicativi Java/Groovy/Grails
 
 ![alt text](http://www.rossonet.org/wp-content/uploads/2015/01/logoRossonet4.png "Rossonet")
 
@@ -20,34 +20,13 @@ alt="Rossonet" width="640" height="360" border="10" /></a>
 
 La [spin Rossonet](http://www.rossonet.org/archives/94) di [Fedora 21](http://it.wikipedia.org/wiki/Fedora_%28informatica%29) è predisposta per contenere tutti gli strumenti utili per lo sviluppo sulla piattaforma Ar4k.
 
-
-Un'installazione Ar4k funzionante è composta da due elementi: un ambiente JVM in cui eseguire agenteAr4k e un account ssh su una macchina Linux che ospita il broker [ActiveMQ](http://activemq.apache.org/) e i servizi per la gestione dell'infrastruttura cloud gestiti con [Consul](https://www.consul.io/).
-
-####Procedure ambiente di sviluppo agenteAr4k
-
 La procedura illustrata vale per macchine CentOS/RedHat/Fedora (il codice è per una sessione di [Bash](https://it.wikipedia.org/wiki/Bash)) 
-
-#####Installazione automatica
-
-Per installare in automatico tutto il sistema compreso le dipendenza,
-utilizzare il seguente comando.
-Se non eseguito con privilegi di root, verrà chiesta l'autenticazione 
-per installare Java e git.
-
-```bash
-sh <(curl -L -s http://<url verso installa.sh>) 
-```
-
-Se "curl" non fosse presente nel sistema, installarlo con:
-```bash
-yum install curl
-```
 
 #####Installazione manuale
 
 Per scaricare l'intero sistema:
 ```bash
-git clone https://github.com/rossonet/agentear4k.git
+git clone https://github.com/ar4k/ModelloGrails.git
 ```
 
 Per lavorare con git in bash:
@@ -84,3 +63,7 @@ Per creare un war installabile su Tomcat >= 7
 ```bash
 ./grailsw war
 ```
+
+### Note per gli sviluppatori
+
+L'ambiente è testato per l'esecuzione con la JVM Oracle in versione 1.7.x. 
