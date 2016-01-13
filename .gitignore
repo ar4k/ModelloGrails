@@ -30,4 +30,6 @@
 /target
 
 # configurazioni eclipse
-.project
+/.project
+/.settings
+/target-eclipse/*

@@ -6,7 +6,7 @@
 <base href="${g.createLink(absolute:true,uri:'/')}" />
 <meta name="author" content="Rossonet s.c.a r.l (Imola) - Italy">
 <meta name="description"
-	content="Template applicativo per App in Grails AngularJS Twitter BootStrap con supporto Kettle SSH Spring Auth">
+	content="Console gestione ambienti Ar4k by Rossonet">
 <meta name="viewport" content="width=device-width">
 
 <link rel="shortcut icon"
@@ -21,76 +21,80 @@
 <!-- In sviluppo non usiamo i minificati -->
 <g:if env="development">
 	<link rel="stylesheet"
-		href="admin/bower_components/bootstrap/dist/css/bootstrap.css" />
-
-
+		href="bower_components/bootstrap/dist/css/bootstrap.css" />
 	<link rel="stylesheet"
-		href="admin/bower_components/metisMenu/dist/metisMenu.css">
+		href="bower_components/metisMenu/dist/metisMenu.css">
 	<link rel="stylesheet"
-		href="admin/bower_components/angular-loading-bar/build/loading-bar.css">
+		href="bower_components/angular-loading-bar/build/loading-bar.css">
 	<link rel="stylesheet"
-		href="admin/bower_components/font-awesome/css/font-awesome.css"
+		href="bower_components/font-awesome/css/font-awesome.css"
 		type="text/css">
+	<link href="bower_components/nvd3/build/nv.d3.css" rel="stylesheet">
 
-	<script src="admin/bower_components/jquery/dist/jquery.js"></script>
-	<script src="admin/bower_components/angular/angular.js"></script>
-	<script src="admin/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script
-		src="admin/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-	<script src="admin/bower_components/json3/lib/json3.js"></script>
-	<script src="admin/bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+		src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/json3/lib/json3.js"></script>
+	<script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
 	<script
-		src="admin/bower_components/angular-loading-bar/build/loading-bar.js"></script>
+		src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
 	<script
-		src="admin/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-	<script src="admin/bower_components/metisMenu/dist/metisMenu.js"></script>
-	<script src="admin/bower_components/marked/lib/marked.js"></script>
-	<script src="admin/bower_components/angular-marked/angular-marked.js"></script>
-	<script src="admin/bower_components/restangular/dist/restangular.js"></script>
-	<script src="admin/bower_components/lodash/dist/lodash.js"></script>
-	<script src="admin/bower_components/angular-animate/angular-animate.js"></script>
-	<script src="admin/bower_components/jsoneditor/dist/jsoneditor.js"></script>
+		src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="bower_components/metisMenu/dist/metisMenu.js"></script>
+	<script src="bower_components/marked/lib/marked.js"></script>
+	<script src="bower_components/angular-marked/dist/angular-marked.js"></script>
+	<script src="bower_components/restangular/dist/restangular.js"></script>
+	<script src="bower_components/lodash/dist/lodash.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/jsoneditor/dist/jsoneditor.js"></script>
+	<script src="bower_components/d3/d3.js"></script>
+	<script src="bower_components/nvd3/build/nv.d3.js"></script>
+	<script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
 </g:if>
 <g:if env="production">
 	<link rel="stylesheet"
-		href="admin/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-
+		href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet"
-		href="admin/bower_components/metisMenu/dist/metisMenu.min.css">
+		href="bower_components/metisMenu/dist/metisMenu.min.css">
 	<link rel="stylesheet"
-		href="admin/bower_components/angular-loading-bar/build/loading-bar.min.css">
+		href="bower_components/angular-loading-bar/build/loading-bar.min.css">
 	<link rel="stylesheet"
-		href="admin/bower_components/font-awesome/css/font-awesome.min.css"
+		href="bower_components/font-awesome/css/font-awesome.min.css"
 		type="text/css">
+	<link href="bower_components/nvd3/build/nv.d3.min.css" rel="stylesheet">
 
-	<script src="admin/bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="admin/bower_components/angular/angular.min.js"></script>
-	<script src="admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script
-		src="admin/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<script src="admin/bower_components/json3/lib/json3.min.js"></script>
-	<script src="admin/bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+		src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="bower_components/json3/lib/json3.min.js"></script>
+	<script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
 	<script
-		src="admin/bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+		src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
 	<script
-		src="admin/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-	<script src="admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-	<script src="admin/bower_components/marked/marked.min.js"></script>
+		src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+	<script src="bower_components/marked/marked.min.js"></script>
 	<script
-		src="admin/bower_components/angular-marked/angular-marked.min.js"></script>
+		src="bower_components/angular-marked/dist/angular-marked.min.js"></script>
 	<script
-		src="admin/bower_components/restangular/dist/restangular.min.js"></script>
-	<script src="admin/bower_components/lodash/dist/lodash.min.js"></script>
+		src="bower_components/restangular/dist/restangular.min.js"></script>
+	<script src="bower_components/lodash/dist/lodash.min.js"></script>
 	<script
-		src="admin/bower_components/angular-animate/angular-animate.min.js"></script>
-	<script src="admin/bower_components/jsoneditor/dist/jsoneditor.min.js"></script>
+		src="bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="bower_components/jsoneditor/dist/jsoneditor.min.js"></script>
+	<script src="bower_components/d3/d3.min.js"></script>
+	<script src="bower_components/nvd3/build/nv.d3.min.js"></script>
+	<script src="bower_components/angular-nvd3/dist/angular-nvd3.min.js"></script>
 </g:if>
 
-<script src="admin/bower_components/angular-lodash/angular-lodash.js"></script>
+<script src="bower_components/angular-lodash/angular-lodash.js"></script>
 <link rel="stylesheet" href="admin/jsoneditor.css" type="text/css">
 <link rel="stylesheet" href="admin/main">
 <link rel="stylesheet" href="admin/sbadmin2">
-<link rel="stylesheet" href="admin/timeline">
 
 
 <!-- Contenuti pagina header-->
@@ -277,64 +281,8 @@
 		src="${resource(dir:'admin',file:'jquery.atmosphere.js')}"></script>
 	<script type="text/javascript"
 		src="${resource(dir:'admin',file:'moment.min.js')}"></script>
+
 	<script>
-	$(function() {
-	"use strict";
-
-	var socketAct = $.atmosphere;
-	var transportAct = 'websocket';
-
-	var requestAct = {
-		url : "<g:createLink controller='wsa' action='sistema' absolute='true'/>/eventoactiviti",
-		contentType : "application/json",
-		trackMessageLength : true,
-		logLevel : 'error',
-		shared : true,
-		transport : transportAct,
-		fallbackTransport : 'long-polling'
-	};
-
-	var subSocketAct = socketAct.subscribe(requestAct);
-
-	socketAct.onMessage = function(response) {
-		try {
-			var json = jQuery.parseJSON(response.responseBody);
-			var messaggio = json.messaggio;
-			var icona = json.icona;
-			var topo = json.tipo;
-			var li = document.createElement("li");
-			var a = document.createElement("a");
-			var i = document.createElement("i");
-			var div = document.createElement("div");
-			var divisore = document.createElement("li");
-			divisore.setAttribute('class',"divider");
-			i.setAttribute('class',"fa "+icona+" fa-fw");
-			var span = document.createElement("span");
-			span.setAttribute('class',"pull-right text-muted small");
-			var testo = document.createTextNode(" "+messaggio);
-			div.appendChild(i);
-			div.appendChild(testo);
-			div.appendChild(span);
-			a.appendChild(div);
-			li.appendChild(a);
-	
-			var listaMessaggiSistemaAct = document.getElementById("messaggiactiviti");
-			listaMessaggiSistemaAct.appendChild(divisore);
-			listaMessaggiSistemaAct.appendChild(li);
-			
-
-			var contatoreAct = document.getElementById("contatoreactiviti");
-			var attualeAct = contatoreAct.textContent;
-			contatoreAct.textContent = +attualeAct+1;
-		} catch (errore) {
-			console.log("Errore in JSON eventi Activiti: "+errore);
-		}
-	};
-
-	});
-	</script>
-	<script>
-
 	$(function() {
 		"use strict";
 
@@ -376,35 +324,7 @@
 				span.setAttribute('class',"pull-right text-muted small");
 				span.appendChild(document.createTextNode(moment().calendar()));
 				switch (jsonMessaggio.tipo) {
-					case 'ENTITY_CREATED': if (jsonMessaggio.processo != null) {
-						messaggio = "Creata istanza per processo "+jsonMessaggio.processo;
-					} else {
-						messaggio = "Creata istanza per processo vuoto";
-						};
-					 break;
-					case 'SCARICORICETTARIO': messaggio = "Caricato il ricettario "+jsonMessaggio.messaggio; break;
-					case 'CARICASEMI': messaggio = "Caricati "+jsonMessaggio.messaggio+" seme/i"; break;
-					case 'ENTITY_INITIALIZED': if (jsonMessaggio.processo != null) {
-							messaggio = "Inizializzata entità "+jsonMessaggio.processo;
-						} else {
-							messaggio = "Inizializzato processo vuoto";
-							};
-						 break;
-					case 'CARICORISORSEACTIVITI': messaggio = jsonMessaggio.messaggio; break;
-					case 'KVSALVATAGGIOCONTESTO': messaggio = 'Salvato il contesto '+jsonMessaggio.contesto+' nello store KV di Consul'; break;
-					case 'KVAGGIUNTO': messaggio = 'Salvata la chiave '+jsonMessaggio.chiave+' nello store KV'; break;
-					case 'KVRIMOSSO': messaggio = 'Rimossa chiave '+jsonMessaggio.chiave+' dallo store KV'; break;
-					case 'VASOAGGIUNTO': messaggio = 'Vaso '+jsonMessaggio.messaggio.etichetta+' aggiunto al sistema'; break;
-					case 'VASOELIMINATO': messaggio = 'Eliminato il vaso '+jsonMessaggio.vaso; break;
-					case 'PROCESS_STARTED': messaggio = 'Istanza '+jsonMessaggio.istanza+' avviata da processo'+jsonMessaggio.processo; break;
-					case 'ACTIVITY_STARTED': messaggio = 'Attività su istanza '+jsonMessaggio.istanza+' iniziata'; break;
-					case 'ACTIVITY_COMPLETED': messaggio = 'Attività su istanza '+jsonMessaggio.istanza+' completata'; break;
-					case 'SEQUENCEFLOW_TAKEN': messaggio = 'Flusso su istanza '+jsonMessaggio.istanza+' seguito'; break;
-					case 'TASK_CREATED': messaggio = 'Task di processo '+jsonMessaggio.processo+' creato per istanza '+jsonMessaggio.istanza; break;
-					case 'CONTESTOSALVATO': messaggio = jsonMessaggio.messaggio; break;
-					case 'VASOSALVATAGGIOCONTESTO': messaggio = 'Salvato il contesto '+jsonMessaggio.contesto+' nel vaso '+jsonMessaggio.vaso; break;
-					case 'RICETTARIOAGGIUNTO': messaggio = 'Aggiunto il ricettario '+jsonMessaggio.messaggio.etichetta; break;
-					case 'RICETTARIOELIMINATO': messaggio = 'Eliminato il ricettario '+jsonMessaggio.messaggio; break;
+					case 'codaMessaggi': messaggio = 'Messaggio sistema: '+jsonMessaggio.messaggio; break;
 					default: messaggio = messaggio; break;
 				}
 				var testo = document.createTextNode(" "+messaggio);

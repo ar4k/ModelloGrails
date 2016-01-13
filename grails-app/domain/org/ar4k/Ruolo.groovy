@@ -16,10 +16,11 @@
 
 package org.ar4k
 
-import grails.converters.JSON;
+import grails.converters.JSON
+import grails.rest.*
 
 
-
+@Resource(uri='/ruoli')
 class Ruolo {
 
 	/** etichetta per la definizione del ruolo */

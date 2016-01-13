@@ -81,7 +81,7 @@ grails.project.dependency.resolution = {
 
 		// compile 'org.jsoup:jsoup:1.8.1'
 		// Vari ASP
-		//compile('com.dropbox.core:dropbox-core-sdk:1.7.7')
+		compile('com.dropbox.core:dropbox-core-sdk:1.8.2')
 		//compile('com.evernote:evernote-api:1.25.1')
 		// compile('org.apache.jclouds:jclouds-all:1.9.1')
 		// compile('org.apache.jclouds.labs:docker:1.9.1')
@@ -130,6 +130,7 @@ grails.project.dependency.resolution = {
 		runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
 		runtime ":database-migration:1.4.0"
 		runtime ":jquery:1.11.1"
+		compile ":jquery-ui:1.10.4"
 
 		// Uncomment these to enable additional asset-pipeline capabilities
 		//compile ":sass-asset-pipeline:1.9.0"
@@ -181,7 +182,7 @@ grails.project.dependency.resolution = {
 		compile ":rest:0.8"
 
 		// Socket
-		compile ":atmosphere-meteor:1.0.4"
+		compile ":atmosphere-meteor:1.0.5"
 
 		// WebFlow
 		compile ":webflow:2.1.0"
