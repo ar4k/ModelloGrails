@@ -239,6 +239,9 @@ grails.routing.camelContextId = 'ar4kInterfaccia'
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'org.ar4k.Utente'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'org.ar4k.UtenteRuolo'
 grails.plugin.springsecurity.authority.className = 'org.ar4k.Ruolo'
+
+grails.plugin.springsecurity.successHandler.alwaysUseDefault = true
+
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
 	'/index':                         ['permitAll'],
@@ -264,6 +267,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**':                            ['ROLE_ADMIN'],
 	//'/admin/**':                    ['ROLE_USER'],
 	'/admin/**':                      ['ROLE_ADMIN','ROLE_USER'],
+	'/wsa/**':                        ['ROLE_ADMIN','ROLE_USER'],
 	//'/Ar4kActiviti/**':               ['ROLE_ADMIN','ROLE_USER'], 
 	//'/Ar4kActiviti/**':               ['permitAll'], // Attenzione!!
 	// Accesso a tutti autenticati
