@@ -33,7 +33,7 @@ grails.project.dependency.resolution = {
 		//excludes 'slf4j-log4j12'
 		// specify dependency exclusions here; for example, uncomment this to disable ehcache:
 		// excludes 'ehcache'
-		excludes 'grails-plugin-log4j'
+		//excludes 'grails-plugin-log4j'
 	}
 	log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
 	checksums true // Whether to verify checksums on resolve
@@ -74,8 +74,8 @@ grails.project.dependency.resolution = {
 		//runtime 'pentaho-kettle:kettle-core:4.4.0-stable'
 		//runtime 'pentaho-kettle:kettle-db:4.4.0-stable'
 		//runtime 'pentaho-kettle:kettle-engine:4.4.0-stable'
-		runtime 'pentaho-kettle:kettle-core:5.0.1-stable'
-		runtime 'pentaho-kettle:kettle-dbdialog:5.0.1-stable'
+		runtime 'pentaho-kettle:kettle-core:5.0.1-stable',{excludes "javassist"}
+		//runtime 'pentaho-kettle:kettle-dbdialog:5.0.1-stable'
 		runtime 'pentaho-kettle:kettle-engine:5.0.1-stable'
 		runtime 'commons-vfs:commons-vfs:1.0'
 		runtime 'mysql:mysql-connector-java:5.1.27'
@@ -119,8 +119,7 @@ grails.project.dependency.resolution = {
 		
 		compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.5.4'
 
-		compile 'org.docx4j:docx4j:3.2.2'
-		
+		compile 'org.docx4j:docx4j:3.2.2', { excludes "slf4j-log4j12" }	
 	}
 
 	plugins {
