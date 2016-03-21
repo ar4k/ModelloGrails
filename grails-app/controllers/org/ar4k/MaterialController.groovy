@@ -30,6 +30,8 @@ import org.xlsx4j.sml.STCellType
 import org.xlsx4j.sml.SheetData
 import org.xlsx4j.sml.Worksheet
 
+import net.sourceforge.tess4j.*
+
 class MaterialController {
 
 	/**
@@ -182,4 +184,21 @@ class MaterialController {
 
 
 	}
+
+
+	def tesseractExample() {
+		File imageFile = new java.io.File(System.getProperty("user.dir")+"/web-app/tessdata/test-ocr.jpg")
+		try {
+			ITesseract instance = new Tesseract()  // JNA Interface Mapping
+			instance.setDatapath(System.getProperty("user.dir")+"/web-app/tessdata")
+			// ITesseract instance = new Tesseract1() // JNA Direct Mapping
+			String result = instance.doOCR(imageFile)
+			render result
+		} catch (TesseractException e) {
+			render e.getMessage()
+		}
+
+	}
+
+
 }

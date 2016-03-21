@@ -66,6 +66,9 @@ grails.project.dependency.resolution = {
 		// runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
 		test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
 
+		runtime 'net.sourceforge.tess4j:tess4j:3.0.0',{excludes "log4j-over-slf4j","logback-classic"}
+		runtime 'net.sourceforge.lept4j:lept4j:1.2.0'
+
 		// Aggiunte
 		runtime 'com.jcraft:jsch:0.1.51'
 		// runtime ('com.openshift:openshift-java-client:2.5.0.Final') { excludes 'slf4j-log4j12' }
