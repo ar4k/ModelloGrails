@@ -89,7 +89,7 @@ grails.project.dependency.resolution = {
 
 		// compile 'org.jsoup:jsoup:1.8.1'
 		// Vari ASP
-		compile('com.dropbox.core:dropbox-core-sdk:1.8.2')
+		runtime('com.dropbox.core:dropbox-core-sdk:1.8.2')
 		//compile('com.evernote:evernote-api:1.25.1')
 		// compile('org.apache.jclouds:jclouds-all:1.9.1')
 		// compile('org.apache.jclouds.labs:docker:1.9.1')
@@ -118,11 +118,11 @@ grails.project.dependency.resolution = {
 		 excludes 'spring-context', 'spring-jdbc', 'spring-orm', 'slf4j-log4j12', 'commons-dbcp'
 		 }
 		 */
-		compile "com.ecwid.consul:consul-api:1.1.4"
+		runtime "com.ecwid.consul:consul-api:1.1.4"
 		
 		compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.5.4'
 
-		compile 'org.docx4j:docx4j:3.2.2', { excludes "slf4j-log4j12" }	
+		runtime 'org.docx4j:docx4j:3.2.2', { excludes "slf4j-log4j12" }	
 	}
 
 	plugins {
