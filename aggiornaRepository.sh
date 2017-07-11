@@ -10,7 +10,7 @@ git add .
 echo "git commit -a -m \"$1\""
 git commit -a -m "$1"
 echo "git push"
-git push
+git push -f origin origin:master
 echo "aggiorna documentazione web su GitHub"
 git push -f origin origin:gh-pages
 
