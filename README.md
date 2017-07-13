@@ -2,6 +2,8 @@
 
 Progetto bootstrap applicativi Java/Groovy/Grails
 
+[![Build Status](http://prometeo.rossonet.net:8080/job/ModelloGrails/badge/icon)](http://prometeo.rossonet.net:8080/job/ModelloGrails/)
+
 ![alt text](http://www.rossonet.org/wp-content/uploads/2015/01/logoRossonet4.png "Rossonet")
 
 [http://www.rossonet.org](http://www.rossonet.org)
